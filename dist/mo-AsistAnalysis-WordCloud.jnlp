@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="mo-AsistAnalysis-WordCloud.jnlp">
+  <information>
+    <title>mo-AsistAnalysis-WordCloud</title>
+    <vendor>Lathy</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib\i18n-1.1.2-SNAPSHOT.jar" size="5097" download="eager" />
+    <jar href="lib\kumo-1.5.jar" size="67060" download="eager" />
+    <jar href="lib\multimodal-observer-0.0.1.jar" size="18439276" download="eager" />
+    <jar href="mo-AsistAnalysis-WordCloud.jar" size="31767" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="controller.Main"  name="mo-AsistAnalysis-WordCloud" />
+  <update check="always"/>
+</jnlp>
