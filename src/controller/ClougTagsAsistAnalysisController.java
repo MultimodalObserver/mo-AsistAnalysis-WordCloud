@@ -253,6 +253,7 @@ public class ClougTagsAsistAnalysisController implements Initializable {
         return listFileDocsTemporal;
     }
     
+    //Permite cargar los diferentes archivos a la extension de wordCloud
     public void set_ListFileTemporal(List<File> listFile){
         System.out.println("Aca entre set list");
         listFileDocsTemporal.clear();
@@ -414,6 +415,7 @@ public class ClougTagsAsistAnalysisController implements Initializable {
             }
         
         }else if(!radioCloud.isSelected() && !radioTable.isSelected()){
+            
             labelCloud.setText(dialogBundle.getString("CloudDebeSeleccionarNubeoTable"));
         
         }
@@ -528,6 +530,7 @@ public class ClougTagsAsistAnalysisController implements Initializable {
         int selected = tabPane.getSelectionModel().getSelectedIndex();
         if(selected ==0){
             btnGuardar.setText(dialogBundle.getString("CloudGenerarTable"));
+            
             
         }else{
             btnGuardar.setText(dialogBundle.getString("CloudGenerarNube"));
@@ -1008,6 +1011,15 @@ public class ClougTagsAsistAnalysisController implements Initializable {
             System.out.println("N: "+ listFileDocsTemporal.get(i).getAbsolutePath());
         
         }
+    }
+    
+    
+    public void limpiarWordCloud (){
+        radioCloud.setSelected(false);
+        radioTable.setSelected(false);
+        tableView.getItems().clear();
+        scrollPane.setContent(null);
+    
     }
     
 }
